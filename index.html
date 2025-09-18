@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matt Quezada — Portfolio</title>
+  <meta name="description" content="Portfolio of Matt Quezada — Computer Science student and SCADA intern.">
+  <link rel="icon" href="assets/favicon.svg">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    /* Fallback critical styles while CSS loads (kept minimal) */
+    body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;margin:0}
+  </style>
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top">MQ</a>
+  <nav class="nav">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Hi, I'm <span class="accent">Matt Quezada</span>.</h1>
+      <p>Computer Science student, SCADA intern, and builder of practical AI + data tools. I like turning messy real-world problems into clean, reliable software.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn" href="assets/Matt_Quezada_Resume.pdf" download>Download résumé</a>
+      </div>
+      <ul class="quick-facts">
+        <li>Location: California</li>
+        <li>Focus: Python, Ignition SCADA, ML</li>
+        <li>Open to: internships & freelance</li>
+      </ul>
+    </div>
+    <div class="hero-aside">
+      <img src="assets/headshot-placeholder.svg" alt="Headshot placeholder of Matt" />
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Selected Projects</h2>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Voice-enabled Restaurant Support (LLM + RAG)</h3>
+        <p>A phone-based agent that answers common questions using business data (menu, hours, FAQs). Built a simple web onboarding flow, retrieval layer, and text-to-speech loop.</p>
+        <ul class="tags">
+          <li>Python</li><li>FastAPI</li><li>RAG</li><li>TTS/STT</li>
+        </ul>
+        <div class="links">
+          <a href="#" aria-disabled="true">Live demo</a>
+          <a href="#" aria-disabled="true">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>SCADA Dashboards for Water Systems</h3>
+        <p>Ignition Perspective 8.1.45 dashboards for tank levels and pressure trends. Built custom tag search, dynamic pen creation, and clean UI for operators.</p>
+        <ul class="tags">
+          <li>Ignition</li><li>Jython</li><li>PLC</li><li>UX</li>
+        </ul>
+        <div class="links">
+          <a href="#" aria-disabled="true">Case study</a>
+          <a href="#" aria-disabled="true">Screenshots</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>LA Crime Analyzer (Arrest Likelihood)</h3>
+        <p>Cleaned 2023–present data, engineered cyclical time features, and trained a classifier to predict arrest vs no-arrest status.</p>
+        <ul class="tags">
+          <li>Python</li><li>Pandas</li><li>TensorFlow</li>
+        </ul>
+        <div class="links">
+          <a href="#" aria-disabled="true">Report</a>
+          <a href="#" aria-disabled="true">GitHub</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>SCADA Intern — Taft, CA</h3>
+        <p>Ignition Perspective scripting in Python/Jython, PLC tag integration, and operator-facing dashboards. Collaborated with technicians and ops to deploy trending and alarms.</p>
+        <p class="meta">2025 — Present</p>
+      </div>
+      <div class="timeline-item">
+        <h3>CSUB Coursework & Projects</h3>
+        <p>Operating Systems (C), Programming Languages (Ada/Lisp/Fortran), Theory of Computation, and ML projects in Python.</p>
+        <p class="meta">2023 — Present</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skill-grid">
+      <li>Python</li><li>Ignition 8.1</li><li>SQL</li><li>Pandas</li><li>TensorFlow/Keras</li>
+      <li>FastAPI</li><li>Git/GitHub</li><li>Docker (basics)</li><li>Linux CLI</li><li>UI/UX</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Best way to reach me is email. This form works on Netlify out of the box.</p>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <div class="grid">
+        <label> Name
+          <input required name="name" autocomplete="name">
+        </label>
+        <label> Email
+          <input required type="email" name="email" autocomplete="email">
+        </label>
+      </div>
+      <label> Message
+        <textarea name="message" rows="5" placeholder="Tell me about your project…"></textarea>
+      </label>
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Matt Quezada. Built with vanilla HTML/CSS/JS. <a href="sitemap.xml">Sitemap</a></p>
+  <div class="socials">
+    <a href="#" aria-label="GitHub">GitHub</a>
+    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    <a href="mailto:hello@example.com" aria-label="Email">Email</a>
+  </div>
+</footer>
+</body>
+</html>
